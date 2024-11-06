@@ -1,0 +1,53 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             } 
+
+      </script> 
+ </head> 
+<body> 
+     
+         <textarea name="siejka" cols="55" rows="50" readonly> 
+            <html> 
+                <head> 
+                <title>
+                
+                </title>
+                </head>
+                <body>
+                    <div style="color:darkblue;font-size:43px;">
+                 <script language="JavaScript">
+                    
+                
+                    var x1_fil=parseFloat(prompt("x1=",""));
+                    var x2_fil=parseFloat(prompt("x2=",""));
+                    var x1_rad = (x1_fil*Math.PI)/180;
+                
+                
+                        document.write("x1 = "+x1_fil+"&nbsp &nbsp &nbsp &nbsp &nbsp x2="+x2_fil+"<br>");
+                        document.write("x1 = "+x1_fil+"&nbsp &nbsp &nbsp &nbsp &nbsp x1="+x1_rad.toFixed(2)+"<br>");
+                
+                    var y1 = 3*(x1_fil*(6/8));
+                    var y2 = 2 * Math.cos(x1_fil) + 3 * Math.sin(x1_fil);
+                    var y3 = Math.pow(Math.pow(x1_fil,5)+ 2 * Math.pow(x2_fil,4) * Math.abs(x1_fil-x2_fil),1/3)
+                
+                    
+                        document.write("y1 = "+y1.toFixed(2)+"<br>");
+                        document.write("y2 = "+y2.toFixed(2)+"<br>");
+                        document.write("y3 = "+y3.toFixed(2)+"<br>");
+                
+                </script>
+                </div>
+                </body>
+                </html>
+           
+           </textarea> <br><br>
+ 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

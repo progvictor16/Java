@@ -1,0 +1,70 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             } 
+
+      </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="120" rows="55" readonly> 
+            <html> 
+    <head> 
+     <meta charset="UTF-8"> 
+     <link rel="stylesheet" href="styl.css"> 
+    </head> 
+   <body> 
+    <script type="text/javascript"> 
+     function AB_FIL() 
+      { 
+    var a= parseFloat(document.getElementById('xa').value); 
+    var b= parseFloat(document.getElementById('ya').value); 
+    var c= parseFloat(document.getElementById('xb').value); 
+    var d= parseFloat(document.getElementById('yb').value); 
+    var e= Math.sqrt(Math.pow((a-c),2))+Math.pow((b-d),2); 
+           document.getElementById("nazwa").innerHTML ="Długość AB= "+e.toFixed(2)+"<br>";  
+      } 
+      function BC_FIL() 
+      { 
+    var a= parseFloat(document.getElementById('xc').value); 
+    var b= parseFloat(document.getElementById('yc').value); 
+    var c= parseFloat(document.getElementById('xb').value); 
+    var d= parseFloat(document.getElementById('yb').value); 
+    var e= Math.sqrt(Math.pow((c-a),2))+Math.pow((d-b),2); 
+           document.getElementById("nazwa").innerHTML ="Długość BC= "+e.toFixed(2)+"<br>";  
+    }
+    function AC_FIL() 
+      { 
+    var a= parseFloat(document.getElementById('xc').value); 
+    var b= parseFloat(document.getElementById('yc').value); 
+    var c= parseFloat(document.getElementById('xa').value); 
+    var d= parseFloat(document.getElementById('ya').value); 
+    var e= Math.sqrt(Math.pow((a-c),2))+Math.pow((b-d),2); 
+           document.getElementById("nazwa").innerHTML ="Długość AC= "+e.toFixed(2)+"<br>";  
+    }
+    
+    </script> 
+     <h1>Długość boków trójkąta</h1><br><br> 
+     Podaj współrzędną xa: <input type="text" id="xa" value="podaj współrzędną:"> <br><br><br> 
+     Podaj współrzędną ya: <input type="text" id="ya" value="podaj współrzędną:"> <br><br><br> 
+     Podaj współrzędną xb: <input type="text" id="xb" value="podaj współrzędną:"> <br><br><br> 
+     Podaj współrzędną yb: <input type="text" id="yb" value="podaj współrzędną:"> <br><br><br>
+     Podaj współrzędną xa: <input type="text" id="xc" value="podaj współrzędną:"> <br><br><br>
+     Podaj współrzędną xa: <input type="text" id="yc" value="podaj współrzędną:"> <br><br><br> 
+     <input type="button" name="wspolrzedna" value="Bok-AB" Onclick="AB_FIL()"><br><br> 
+     <input type="button" name="wspolrzedna" value="Bok-BC" Onclick="BC_FIL()"><br><br> 
+     <input type="button" name="wspolrzedna" value="Bok-AC" Onclick="AC_FIL()"><br><br>
+     <div  style="color:red;font-size:50px;"id="nazwa"></div> 
+   </body> 
+   </html>
+           
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,28 @@
+<html> 
+    <head> 
+     <meta charset="UTF-8"> 
+     <link rel="stylesheet" href="styl.css"> 
+    </head> 
+   <body> 
+    <div style="color:rgb(52, 8, 99);font-size:50px;"> 
+        <script language="JavaScript"> 
+            var N0 = prompt("N0="); 
+            var t = prompt("t=");
+            var c = prompt("T1/2=");
+
+    
+        document.write("N0="+N0+"[sztuk]"+"<br>"+"t="+t+"[lat]"+"<br>"+"T1/2="+c+"[lat]"+"<br>");
+        
+            var lambda = Math.LN2/c;
+        document.write("Lambda="+lambda.toFixed(7)+"[1/rok]"+"<br>");
+         
+            var N = N0* Math.pow(Math.E,-lambda*t);
+        document.write("N="+N.toFixed(7)+"[sztuk]")
+        </script> 
+    </div>  
+     
+   </body> 
+   </html>
+<!--Victor Filipiak-->
+   
+  

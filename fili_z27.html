@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblicz wysokość i kąt samolotu</title>
+    <script>
+       
+        function oblicz() {
+          
+            var odl_fil = parseFloat(document.getElementById('odl_fil').value);  
+            var s_fil = parseFloat(document.getElementById('s_fil').value); 
+            var kat_fil = parseFloat(document.getElementById('kat_fil').value);  
+
+            
+            var kat_radiany = kat_fil * Math.PI / 180;
+
+           
+            var h_fil = s_fil * Math.sin(kat_radiany);
+
+            var kat_obliczony = Math.asin(h_fil / s_fil) * 180 / Math.PI; 
+
+            
+            document.getElementById('wyniki').innerHTML = "Wysokość: " + h_fil.toFixed(2) + " m<br>" +
+                                                             " Kąt startu : " + kat_obliczony.toFixed(2) + "°";
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz wysokość i kąt startu samolotu</h1>
+    
+    <label for="odl_fil">Odległość między Arturem a Dawidem (w metrach):</label><br>
+    <input type="text" id="odl_fil" name="odl_fil"><br><br>
+
+    <label for="s_fil">Droga przebyta przez samolot (w metrach):</label><br>
+    <input type="text" id="s_fil" name="s_fil"><br><br>
+
+    <label for="kat_fil">Kąt startu samolotu w stopniach:</label><br>
+    <input type="text" id="kat_fil" name="kat_fil"><br><br>
+
+    <button onclick="oblicz()">Oblicz</button>
+
+    <h1>Wyniki:</h1>
+    <div style="font-size: 50px; color: red;" id="wyniki"></div>
+</body>
+</html>

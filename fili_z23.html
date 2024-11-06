@@ -1,0 +1,35 @@
+<html> 
+    <head> 
+     <meta charset="UTF-8"> 
+     <link rel="stylesheet" href="styl.css"> 
+    </head> 
+   <body> 
+    <script type="text/javascript"> 
+     function dlugosc_drabiny   () 
+      { 
+    var a= parseFloat(document.getElementById('d').value); 
+    var b= parseFloat(document.getElementById('x').value); 
+   
+    var c=Math.sqrt((a*a)+(b*b)) ; 
+    
+    var e= Math.atan(a/b)*(180/Math.PI);
+    document.getElementsByName('drabina')[0].value=c.toFixed(2);
+    document.getElementsByName('alfa')[0].value=e.toFixed(2);
+    
+          
+      } 
+   
+    </script> 
+     <h1>Dlugosc drabiny</h1><br><br> 
+     Podaj d: <input type="text" id="d" > &nbsp;
+     Podaj x: <input type="text" id="x" > <br><br> 
+    
+     <input type="button" name="dlugosc" value="oblicz" Onclick="dlugosc_drabiny()"><br><br><br>
+     
+    Drabina=&nbsp;<input name="drabina" size="5">&nbsp;&nbsp;
+    Alfa=&nbsp;<input name="alfa" size="5">&nbsp;&nbsp;
+     
+   </body> 
+   </html>
+
+  
