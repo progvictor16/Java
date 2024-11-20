@@ -1,0 +1,54 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             } 
+
+      </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="105" rows="45" readonly> 
+            <html>
+
+            <head>
+                <script type="text/javascript">
+                    function mebel(rodzaj_m, kolor_m, cena_m, rok_m) {
+                        this.rodzaj = rodzaj_m;
+                        this.kolor = kolor_m;
+                        this.cena = cena_m;
+                        this.rok = rok_m;
+                    }
+                    mebel.prototype.wypisz = function () {
+                        alert(this.rodzaj + ' ' + this.kolor + ' ' + this.cena+' '+this.rok);
+                    };
+                    var mebel1 = new mebel("Krzesło", "Czerwone", "150zł", "2015rok");
+                    var mebel2 = new mebel('Stół', 'Brązowy', '210zł', "2021rok");
+                    var mebel3 = new mebel('Biórko', 'Czarne', '125zł', "2000rok");
+                    mebel1.wypisz();  
+                    mebel2.wypisz();
+                    mebel3.wypisz();
+                    document.write("dostęp do właściwości" + "<br>"+"<br>");
+                    
+                    document.write("mebel pierwszy" + "   " + mebel1.rodzaj + "   " + mebel1.kolor+ "   " + mebel1.cena+"  "+mebel1.rok+"<br>"+"<br>"); 
+                    document.write("mebel drugi" + "   " + mebel2.rodzaj + "   " + mebel2.kolor+ "   " + mebel2.cena+"  "+mebel2.rok+"<br>"+"<br>");  
+                    document.write("mebel tzreci" + "   " + mebel3.rodzaj + "   " + mebel3.kolor+ "   " + mebel3.cena+"  "+mebel3.rok+"<br>");
+                </script>
+            </head>
+            
+            <body>
+                <br>
+                programowanie obiektowe
+            </body>
+            
+            </html>
+           
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

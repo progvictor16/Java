@@ -1,0 +1,54 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             } 
+
+      </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="84" rows="38" readonly> 
+            <html>
+                <head>
+                <script type="text/javascript">
+               
+                var Mebel = {
+                   rodzaj: 'Krzesło',
+               kolor: 'Czerwone',
+               cena: '150zł',
+               pokaz_filipiak: function ()
+               {
+                document.write(this.kolor + ' ' + this.rodzaj+"-"+this.cena)
+                }
+               }
+               Mebel.pokaz_filipiak();
+               Mebel.rok=2015;
+               Mebel.wypisz_filipiak=function() {alert('Rok produkcji: ' + this.rok )}
+               Mebel.wypisz_filipiak();
+                </script>
+                </head>
+               <body>
+               <br>
+                Programowanie obiektowe. <br>
+                Obiekt to Mebel<br>
+                Pola:<br>
+                rodzaj<br>
+                kolor<br>
+                zawod<br>
+                metoda: pokaz_filipiak<br>
+                nowe pole to Rok produkcji <br>
+                nowa metoda to wypisz_filipiak();<br>
+               </body>
+               </html>
+               
+           
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

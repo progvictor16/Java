@@ -1,0 +1,47 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             } 
+
+      </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="30" readonly> 
+            <html>
+                <head>
+                <script type="text/javascript">
+                var Mebel = {
+               rodzaj: 'Krzesło',
+               kolor: 'Czerwone',
+               cena: '150zł',
+               Mebel_wyswietl_Filipiak: function ()
+               {
+                document.write(this.kolor + ' ' + this.rodzaj+"-"+this.cena)
+                }
+               }
+               Mebel.Mebel_wyswietl_Filipiak()
+                </script>
+                </head>
+               <body>
+               <br>
+                Programowanie obiektowe. <br>
+                Obiekt to Mebel<br>
+                Pola:<br>
+                Rodzaj<br>
+                Kolor<br>
+                Cena<br>
+                metoda: Mebel_wyswietl_Filipiak<br>
+               </body>
+               </html>
+           
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 
